@@ -1,0 +1,54 @@
+<section class="veg_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+           <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <div class="box">
+            <div class="detail-box">
+                <table>
+<tr>
+	<% count=0 %>
+	<% @veggies.each do |veggie|%>
+	<% if (count%3)== 0%>
+</tr>
+<tr>
+	<% end%>
+	<% count+=1 %>
+	<td><div>
+             <%= image_tag veggie.product_image,:height=>"300",:width=>"300" %><br />
+            </div>
+		<div class="price_box">
+                <h6 class="price_heading">
+                	Name:<%= veggie.name %><br />
+					type_of:<%= veggie.type_of %></br>
+                  price_per_kg:<%= veggie.price_per_kg %><br />
+                </h6>
+              </div>
+              <section class="contact_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+              <div class="form_container contact-form">
+		<div class="btn_box">
+       
+                
+                  <%= button_to 'Add to cart',line_items_path(:store_id=>veggie.id) %></td>
+                
+             
+                
+              </div>
+	</div>
+</div>
+</div>
+</section>
+
+<% end %>
+
+</tr>
+</table>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+</section>
+
