@@ -104,5 +104,5 @@ config.action_mailer.smtp_settings = {
 :password             => 'Masthan@2021',
 :authentication       => "plain",
 :enable_starttls_auto => true
-
+}
 end
